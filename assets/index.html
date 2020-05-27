@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        BlackJack
+    </header>
+    <div class="row mt-2">
+        <div id="div-botones" class="col text-center">
+            <button id="btnReset" class="btn btn-danger">New Game</button>
+            <button id="btnPedir" disabled="disabled" class="btn btn-primary">Get Card</button>
+            <button id="btnStop" disabled="disabled" class="btn btn-primary">Stop</button>
+        </div>
+    </div>
+    <!-- JUGADOR 1 -->
+    <div class="row container">
+        <div class="col">
+            <h1>Jugador 1 - <small>0</small></h1>
+            <div id="jugador-cartas" class="divCartas">
+                <!-- <img class="carta" src="../assets/cartas/10H.png" alt="">
+                <img class="carta" src="../assets/cartas/10H.png" alt="">
+                <img class="carta" src="../assets/cartas/10H.png" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPUTER    -->
+    <div class="row container mt-2">
+        <div class="col">
+            <h1>Computadora - <small>0</small></h1>
+            <div id="computadora-cartas" class="divCartas">
+                <!-- <img class="carta" src="../assets/cartas/10H.png" alt="">
+                <img class="carta" src="../assets/cartas/10H.png" alt="">
+                <img class="carta" src="../assets/cartas/10H.png" alt=""> -->
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/undercore-min.js"></script>
+    <script src="../assets/js/juego.js"></script>
+
+    <script>
+        console.log(miModulo);
+
+        document.querySelector('#btnReset').addEventListener('click', () => {
+            miModulo.nuevoJuego();
+        })
+    </script>
+</body>
+
+</html>
